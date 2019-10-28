@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1671.6">
+  <style type="text/css">
+  /* 设置或检索弹性盒堆叠伸缩行的对齐方式。*/
+  #main {
+    width: 70px;
+    height: 300px;
+    border: 1px solid #ccc;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap; /* 属性规定flex容器是单行或者多行，同时横轴的方向决定了新行堆叠的方向。*/
+    -webkit-flex-wrap: wrap;
+    align-content: space-between; /*align-content设置或检索弹性盒子元素在y轴方向上的对齐方式|justify-content 用于设置或检索弹性盒子元素在主轴（横轴）方向上的对齐方式*/
+  }
+  #main div {
+    width: 70px;
+    height: 70px;
+  }
+  .box1 {
+    background: coral;
+  }
+  .box2 {
+    background: lightblue;
+  } 
+  .box3 {
+    background: pink;
+  }
+
+  /* flex-flow是 属性是 flex-direction 和 flex-wrap 属性的复合属性*/
+  #main1 {
+    width: 100px;
+    height: 300px;
+    border: 1px solid green;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: column nowrap;
+    -webkit-flex-flow: column nowrap;
+  }
+
+  #main1 div:nth-of-type(1) {flex-grow: 1;} /* flex-grow 属性用于设置或检索弹性盒的扩展比率x|flex-shrink 属性用于设置或检索弹性盒的收缩比率 */
+  #main1 div:nth-of-type(2) {flex-grow: 2;}
+  #main1 div:nth-of-type(3) {flex-basis: 100px;} /* flex-basis 属性用于设置或检索弹性盒伸缩基准值(初始长度) */
+
+  </style>
+</head>
+<body>
+  <div id="main">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+  </div>
+
+  <div id="main1">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+  </div>
+</body>
+</html>
