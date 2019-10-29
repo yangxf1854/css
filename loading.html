@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style type="text/css">
+  /* loading效果1 */
+  #main1{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 50%;
+    animation: loanding1 1.3s linear infinite;
+    -webkit-animation: loanding1 1.3s linear infinite
+  }
+  @keyframes loanding1 {
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+
+  /* loading效果2 */
+  #main2{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 20px;
+  }
+  #main2>span{
+    width: 10px;
+    height: 10px;
+    background: green;
+    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+    animation: loading2 1.04s linear infinite;
+  }
+  #main2 span:nth-child(1){
+    left: 0;
+    top: 35%;
+    animation-delay: 0.1s;
+  }
+  #main2 span:nth-child(2){
+    left: 6px;
+    top: 3%;
+    animation-delay: .2s;
+  }
+  #main2 span:nth-child(3){
+    left: 21px;
+    top: -7%;
+    animation-delay: .3s;
+  }
+  #main2 span:nth-child(4){
+    right: -5px;
+    top: 14%;
+    animation-delay: 0.4s;
+  }
+  #main2 span:nth-child(5){
+    right: -9px;
+    top: 52%;
+    animation-delay: 0.5s;
+  }
+  #main2 span:nth-child(6){
+    right: 0;
+    top: 87%;
+    animation-delay: .6s;
+  }
+  #main2 span:nth-child(7){
+    left: 13px;
+    top: 95%;
+    animation-delay: .7s;
+  }
+  #main2 span:nth-child(8){
+    left: 1px;
+    bottom: 5%;
+    animation-delay: .8s;
+  }
+  @keyframes loading2 {
+    0%{
+      -webkit-transform: scale(1.2);
+      opacity: 1;
+      }
+      100%{
+      -webkit-transform: scale(.4);
+      opacity: 0.5;
+      }
+  }
+  </style>
+</head>
+<body>
+  <!-- loading效果1：半圆 -->
+  <div id="main1"></div>
+
+  <!-- loading效果2：9个小圆 -->
+  <div id="main2">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</body>
+</html>
